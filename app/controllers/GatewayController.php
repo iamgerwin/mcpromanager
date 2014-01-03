@@ -17,11 +17,11 @@ class GatewayController extends BaseController {
                     if($sd->ip == $_SERVER['REMOTE_ADDR']) {
                                         $checker = 1;
                                         $data =  new stdClass();
-                                          $data->username = 'cmanabat';
-                                          $data->password= '82OedDwc';
+                                          $data->username = '';
+                                          $data->password= '';
                                           $data->to= Input::get('To');
                                           $data->msg = rawurlencode(Input::get('Msg'));
-                          $url = "http://mcpro.sun-solutions.ph/mc/send.aspx?user=$data->username&pass=$data->password&from=MDL&to=$data->to&msg=$data->msg ";
+                          $url = "";
                          
                          return file_get_contents($url);
                     } else{
